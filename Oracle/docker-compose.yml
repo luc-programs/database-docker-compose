@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  oracle:
+    image: gvenzl/oracle-xe:21
+    container_name: oracle-XE-21
+    restart: always
+    environment:
+      ORACLE_ALLOW_REMOTE: "true"
+      ORACLE_PASSWORD: 789789
+    ports:
+      - "1521:1521"
+    volumes:
+      - oracle_data:/opt/oracle/oradata
+networks:
+  oracle:
+    driver: bridge
+  
+volumes:
+  oracle_data:
