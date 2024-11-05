@@ -1,0 +1,21 @@
+version: '3.5'
+services:
+  postgres:
+    container_name: sql-server
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      - MSSQL_SA_PASSWORD=534680Lu*
+      - MSSQL_PID=developer
+      - ACCEPT_EULA=Y 
+    volumes:
+       - ./data:/initdb
+    ports:
+      - "1433:1433"
+    networks:
+      - sqlserver
+    restart: always
+
+networks:
+  sqlserver:
+    driver: bridge
+
