@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   oracle:
     image: gvenzl/oracle-xe:21
@@ -7,14 +5,16 @@ services:
     restart: always
     environment:
       ORACLE_ALLOW_REMOTE: "true"
-      ORACLE_PASSWORD: 789789
+      ORACLE_PASSWORD: 290686Lu*
+      APP_USER: luciano
+      APP_USER_PASSWORD: 290686Lu*
     ports:
       - "1521:1521"
     volumes:
-      - oracle_data:/opt/oracle/oradata
+      - database:/var/lib/oracle
 networks:
   oracle:
     driver: bridge
   
 volumes:
-  oracle_data:
+  database:

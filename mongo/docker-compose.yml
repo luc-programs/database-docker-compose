@@ -1,6 +1,3 @@
-version: '3.8'
-volumes:
-  database:
 services:
   mongo:
     image: mongo:6.0
@@ -8,9 +5,11 @@ services:
     restart: always
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
-      MONGO_INITDB_ROOT_PASSWORD: 789789
+      MONGO_INITDB_ROOT_PASSWORD: 290686Lu*
     volumes:
       - database:/var/lib/mongo
     ports:
       - "27017:27017"
+volumes:
+  database:
 
