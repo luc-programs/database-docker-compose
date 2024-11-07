@@ -5,9 +5,9 @@ services:
     restart: always
     environment:
       ORACLE_ALLOW_REMOTE: "true"
-      ORACLE_PASSWORD: 290686Lu*
+      ORACLE_PASSWORD: 789789
       APP_USER: luciano
-      APP_USER_PASSWORD: 290686Lu*
+      APP_USER_PASSWORD: 789789
     ports:
       - "1521:1521"
     volumes:
@@ -15,6 +15,5 @@ services:
 networks:
   oracle:
     driver: bridge
-  
 volumes:
   database:

@@ -4,7 +4,7 @@ services:
     image: postgres
     environment:
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: 290686Lu*
+      POSTGRES_PASSWORD: 789789
       PGDATA: /data/postgres
     volumes:
        - database:/var/lib/postgres

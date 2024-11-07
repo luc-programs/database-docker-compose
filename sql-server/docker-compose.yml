@@ -13,7 +13,6 @@ services:
     networks:
       - sqlserver
     restart: always
-
 networks:
   sqlserver:
     driver: bridge
