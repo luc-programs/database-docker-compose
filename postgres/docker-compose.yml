@@ -4,7 +4,7 @@ services:
     image: postgres
     environment:
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: 789789
+      POSTGRES_PASSWORD: 290686Lu*
       PGDATA: /data/postgres
     volumes:
        - database:/var/lib/postgres
@@ -13,10 +13,8 @@ services:
     networks:
       - postgres
     restart: always
-
 networks:
   postgres:
     driver: bridge
-
 volumes:
-    database:
+  database:
